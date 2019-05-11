@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
 
 import SEO from 'src/components/seo';
+import CommandPrompt from 'src/shared-components/commandPrompt';
 
 const ChangelogPage = ({ data }) => {
   const { html } = data.markdownRemark;
@@ -10,7 +11,7 @@ const ChangelogPage = ({ data }) => {
   return(
     <React.Fragment>
       <SEO title="Changelog" keywords={['yihwan kim', 'yihwan', 'kim', 'bio']} />
-      <div>$: Yihwan/Changelog</div>
+      <CommandPrompt pathname="/changelog"/>
       <ChangelogSection dangerouslySetInnerHTML={{ __html: html }} />
     </React.Fragment>
   );

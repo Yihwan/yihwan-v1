@@ -23,8 +23,8 @@ const FONT_SIZE = {
 };
 
 const FONT_FAMILY = {
-  primary: 'Roboto Mono, monospace',
-  secondary: 'mono',
+  primary: 'Monaco, monospace',
+  system: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
 }
 
 const displayStyle = css`

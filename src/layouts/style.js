@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { COLORS, MEDIA_QUERIES, SPACER } from 'src/styles/constants';
+import { MEDIA_QUERIES } from 'src/styles/constants';
 
 export const LayoutContainer = styled.main`
   position: absolute;

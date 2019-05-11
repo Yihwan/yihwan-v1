@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SEO from 'src/components/seo';
-import arrayGenerator from 'src/utils/arrayGenerator';
+import StyledArray from 'src/shared-components/styledArray';
 
 const CONTACT_LINKS = [
   <a href="mailto:hi@yihwan.kim">hi@yihwan.kim</a>,
@@ -14,7 +14,7 @@ const ContactPage = () => (
   <React.Fragment>
     <SEO title="Contact" keywords={['yihwan kim', 'yihwan', 'kim', 'contact', 'email']} />
     <section>
-      [{arrayGenerator(CONTACT_LINKS)}]
+      <StyledArray array={CONTACT_LINKS}/>
     </section>
   </React.Fragment>
 )

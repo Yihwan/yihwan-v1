@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Header from 'src/components/header';
 import Navigation from 'src/components/navigation';
-import CommandPrompt from 'src/components/commandPrompt';
+import CommandLine from 'src/components/commandLine';
 import Terminal from 'src/components/terminal';
 import injectGlobalStyles from '../utils/injectGlobalStyles';
 import { LayoutContainer } from './style';
@@ -25,10 +25,10 @@ class Layout extends React.Component {
         </section>
 
         <section>
-          <Terminal>
+          <Terminal pathname={pathname}>
             <Navigation pathname={pathname}/>
               {children}
-            <CommandPrompt pathname={pathname}/>
+            <CommandLine pathname={pathname}/>
           </Terminal>
         </section>
       </LayoutContainer>

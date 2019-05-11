@@ -57,4 +57,9 @@ export const brandStyles = css`
     color: white;
     background-color: ${COLORS.terminalBlack};
   }
+  
+  a {
+    color: ${COLORS.terminalCyan};
+    text-decoration: none;
+  }
 `;

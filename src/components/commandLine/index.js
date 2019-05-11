@@ -5,7 +5,13 @@ import { capitalize, lowercase } from 'lodash';
 import { navigate } from 'gatsby';
 import stringSimilarity from 'string-similarity';
 
-class CommandPrompt extends React.Component {
+import CommandPrompt from 'src/shared-components/commandPrompt';
+
+import {
+  CommandLineForm, CommandError,
+} from './style';
+
+class CommandLine extends React.Component {
   static propTypes = {
     pathname: PropTypes.string,
   }
@@ -21,9 +27,9 @@ class CommandPrompt extends React.Component {
 
     return previousInteractions.map(interaction => (
       <div>
-        <div>$: {'/'}Yihwan{pathname === "/" ? '' : `/${capitalize(pathname.slice(1))}`}</div>
+        <CommandPrompt pathname={pathname}/>
         <div>>> {interaction.command}</div>
-        {interaction.errorMessage && <div>{interaction.errorMessage}</div>}
+        {interaction.errorMessage && <CommandError><span>error:</span> {interaction.errorMessage}</CommandError>}
       </div>
     ));
   }
@@ -49,7 +55,7 @@ class CommandPrompt extends React.Component {
 
     if ((currentCommand === currentPath) || (currentCommand === 'home' && currentPath === '')) {
       console.log(currentPath);
-      errorMessage = `error: Current page is already ${capitalize(currentCommand)}`;
+      errorMessage = `Current page is already ${capitalize(currentCommand)}`;
       this.populatePreviousInteractions(currentCommand, errorMessage);
       return;
     }
@@ -63,9 +69,9 @@ class CommandPrompt extends React.Component {
     const bestMatch = stringSimilarity.findBestMatch(currentCommand, availableRoutes).bestMatch;
 
     if (bestMatch.rating > 0.25) {
-      errorMessage = `error: ${currentCommand}: command not found. Did you mean ${bestMatch.target}?`;
+      errorMessage = `${currentCommand}: command not found. Did you mean ${bestMatch.target}?`;
     } else {
-      errorMessage = `error: ${currentCommand}: command not found`;
+      errorMessage = `${currentCommand}: command not found`;
     }
 
     this.populatePreviousInteractions(currentCommand, errorMessage);
@@ -82,13 +88,13 @@ class CommandPrompt extends React.Component {
     return(
       <React.Fragment>
         {this.renderPreviousInteractions()}
-        <div>$: {'/'}Yihwan{pathname === "/" ? '' : `/${capitalize(pathname.slice(1))}`}</div>
-        <form onSubmit={this.handleCommandSubmit}>
-          >><input type="text" value={currentCommand} onChange={this.handleCommandChange}/>
-        </form>
+        <CommandPrompt pathname={pathname}/>
+        <CommandLineForm onSubmit={this.handleCommandSubmit}>
+          >> <input type="text" value={currentCommand} onChange={this.handleCommandChange}/>
+      </CommandLineForm>
       </React.Fragment>
     );
   }
 }
 
-export default CommandPrompt;
+export default CommandLine;

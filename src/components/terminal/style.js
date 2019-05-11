@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { COLORS, MEDIA_QUERIES, SPACER } from 'src/styles/constants';
+import { COLORS, MEDIA_QUERIES, SPACER, Typography } from 'src/styles/constants';
 
 export const TerminalContainer = styled.div`
   display: flex;
@@ -8,6 +8,7 @@ export const TerminalContainer = styled.div`
   min-height: 600px;
   width: 100%;
   max-width: 720px;
+  line-height: 1.3rem;
 
   ${MEDIA_QUERIES.mdUp} {
     width: 90%;
@@ -26,6 +27,7 @@ export const TerminalMenuBar = styled.div`
   justify-content: flex-start;
   align-items: center;
   border-radius: 10px 10px 0 0;
+  position: relative;
 `;
 
 export const TerminalMenuButton = styled.div`
@@ -37,12 +39,20 @@ export const TerminalMenuButton = styled.div`
   margin-left: 0.5rem;
 `;
 
+export const TerminalMenuHeader = styled.div`
+  font-family: ${Typography.FONT_FAMILY.system};
+  color: ${COLORS.black};
+  font-size: 0.75em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+`;
+
 export const TerminalBody = styled.div`
   height: 100%;
   border-radius: 0 0 4px 4px;
   background-color: ${COLORS.darkGrey};
 
-  font-size: 14px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   box-shadow: 0 50px 100px rgba(65, 65, 74, .2);
