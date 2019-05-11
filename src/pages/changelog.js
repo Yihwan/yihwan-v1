@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import styled from '@emotion/styled';
 
 import SEO from 'src/components/seo';
 
@@ -10,7 +11,7 @@ const ChangelogPage = ({ data }) => {
     <React.Fragment>
       <SEO title="Changelog" keywords={['yihwan kim', 'yihwan', 'kim', 'bio']} />
       <div>$: Yihwan/Changelog</div>
-      <section dangerouslySetInnerHTML={{ __html: html }} />
+      <ChangelogSection dangerouslySetInnerHTML={{ __html: html }} />
     </React.Fragment>
   );
 }
@@ -23,6 +24,12 @@ export const pageQuery = graphql`
         contentType,
       }
     }
+  }
+`;
+
+const ChangelogSection = styled.section`
+  h1 {
+
   }
 `;
 

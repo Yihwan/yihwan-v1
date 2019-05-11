@@ -28,12 +28,31 @@ class CommandPrompt extends React.Component {
     ));
   }
 
+  populatePreviousInteractions = (currentCommand, errorMessage) => {
+    const interaction = {
+      command: currentCommand,
+    };
+    interaction.errorMessage = errorMessage;
+
+    this.setState(prevState => ({
+      previousInteractions: [...prevState.previousInteractions, interaction],
+    }));
+  }
+
   handleCommandSubmit = event => {
     event.preventDefault();
     let errorMessage = null;
     const currentCommand = lowercase(this.state.currentCommand);
+    const currentPath = lowercase(this.props.pathname);
     const availableRoutes = Object.keys(PAGE_URLS).map(page => lowercase(page));
     this.setState({ currentCommand: '' });
+
+    if ((currentCommand === currentPath) || (currentCommand === 'home' && currentPath === '')) {
+      console.log(currentPath);
+      errorMessage = `error: Current page is already ${capitalize(currentCommand)}`;
+      this.populatePreviousInteractions(currentCommand, errorMessage);
+      return;
+    }
 
     if (availableRoutes.includes(currentCommand)) {
       navigate(`/${PAGE_URLS[currentCommand]}`);
@@ -49,14 +68,7 @@ class CommandPrompt extends React.Component {
       errorMessage = `error: ${currentCommand}: command not found`;
     }
 
-    const interaction = {
-      command: currentCommand,
-    };
-    interaction.errorMessage = errorMessage;
-
-    this.setState(prevState => ({
-      previousInteractions: [...prevState.previousInteractions, interaction],
-    }));
+    this.populatePreviousInteractions(currentCommand, errorMessage);
   }
 
   handleCommandChange = event => {

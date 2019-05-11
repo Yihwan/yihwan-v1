@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { capitalize } from 'lodash';
 
 import PAGE_URLS from 'src/constants/pageUrls';
+import arrayGenerator from 'src/utils/arrayGenerator';
 
 class Navigation extends React.Component {
 
@@ -11,11 +12,9 @@ class Navigation extends React.Component {
     const linkArray = [];
 
     for (const page in PAGE_URLS) {
-      if (PAGE_URLS[page] !== pathname) {
-        linkArray.push(
-          <Link to={PAGE_URLS[page]}>{capitalize(page)}</Link>
-        );
-      }
+      linkArray.push(
+        <Link to={PAGE_URLS[page]}>{capitalize(page)}</Link>
+      );
     }
 
     return linkArray;
@@ -27,9 +26,7 @@ class Navigation extends React.Component {
     return(
       <div>
         Type or click where to go next: <br />
-        [{linkArray.map((link, idx) => (
-          <span>"{link}"{idx === linkArray.length - 1 ? '' : ', '}</span>
-        ))}] <br />
+        [{arrayGenerator(linkArray)}] <br />
         Or type "help" at any time to view all options.
       </div>
     );
