@@ -1,1 +1,1 @@
-# [yihwan.kim](yihwan.kim) redesign (in progress)
+# [yihwan.kim](http://yihwan.kim) redesign (in progress)
