@@ -8,9 +8,11 @@ export const TerminalContainer = styled.div`
   min-height: 600px;
   width: 100%;
   max-width: 720px;
-  line-height: 1.3rem;
+  line-height: 1.5;
+  font-size: 0.75rem;
 
   ${MEDIA_QUERIES.mdUp} {
+    font-size: 0.875rem;
     width: 90%;
   }
 
@@ -42,10 +44,15 @@ export const TerminalMenuButton = styled.div`
 export const TerminalMenuHeader = styled.div`
   font-family: ${Typography.FONT_FAMILY.system};
   color: ${COLORS.black};
-  font-size: 0.75em;
+  font-size: 0.65rem;
   position: absolute;
   text-align: center;
   width: 100%;
+  line-height: 1;
+
+  ${MEDIA_QUERIES.smUp} {
+    font-size: 0.75rem;
+  }
 `;
 
 export const TerminalBody = styled.div`

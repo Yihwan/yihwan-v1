@@ -3,6 +3,7 @@ contentType: 'changelog'
 ---
 
 <h1>Changelog</h1>
+<h2>Some highlights from my life ...</h2>
 
 <div class="changelog-item">
   <div class="changelog-header">

@@ -1,10 +1,10 @@
 # [yihwan.kim](http://yihwan.kim) redesign (in progress)
 
 ### To Do's
-* Style changelog.
 * Load text with typewriter or css animation.
-* Style cursor.
 * Look into why chars are being removed from form.
+* Handle blank command case.
+* Routing with click doesn't clear interactions.
 * Command K (or clear or whatever) removes all previous interactions.
 * Add wave hand animation.
 * Style containers.

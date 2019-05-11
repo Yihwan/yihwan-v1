@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { MEDIA_QUERIES } from 'src/styles/constants';
+import { MEDIA_QUERIES, SPACER } from 'src/styles/constants';
 
 export const LayoutContainer = styled.main`
   position: absolute;
@@ -21,4 +21,8 @@ export const LayoutContainer = styled.main`
       flex: 1;
     }
   }
+`;
+
+export const TerminalContentContainer = styled.section`
+  margin: ${SPACER.large} 0;
 `;

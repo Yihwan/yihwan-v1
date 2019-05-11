@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { COLORS, Typography } from 'src/styles/constants';
+import { COLORS, Typography, MEDIA_QUERIES } from 'src/styles/constants';
 
 export const CommandLineForm = styled.form`
   input[type="text"] {
@@ -7,7 +7,13 @@ export const CommandLineForm = styled.form`
     color: ${COLORS.terminalWhite};
     border: 0;
     font-family: ${Typography.FONT_FAMILY.primary};
-    font-size: 1rem;
+    font-size: 0.75rem;
+    caret-color: ${COLORS.terminalGreen};
+
+    ${MEDIA_QUERIES.mdUp} {
+      font-size: 0.875rem;
+      width: 90%;
+    }
 
     &:focus {
       outline: 0;

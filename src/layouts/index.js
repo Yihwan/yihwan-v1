@@ -6,7 +6,7 @@ import Navigation from 'src/components/navigation';
 import CommandLine from 'src/components/commandLine';
 import Terminal from 'src/components/terminal';
 import injectGlobalStyles from '../utils/injectGlobalStyles';
-import { LayoutContainer } from './style';
+import { LayoutContainer, TerminalContentContainer } from './style';
 
 class Layout extends React.Component {
   static propTypes = {
@@ -27,7 +27,9 @@ class Layout extends React.Component {
         <section>
           <Terminal pathname={pathname}>
             <Navigation pathname={pathname}/>
-              {children}
+              <TerminalContentContainer>
+                {children}
+              </TerminalContentContainer>
             <CommandLine pathname={pathname}/>
           </Terminal>
         </section>

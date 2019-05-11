@@ -16,9 +16,19 @@ class CommandLine extends React.Component {
     pathname: PropTypes.string,
   }
 
-  state = {
-    previousInteractions: [],
-    currentCommand: ''
+  constructor(props) {
+    super(props);
+    this.commandLineInput = React.createRef();
+
+    this.state = {
+      previousInteractions: [],
+      currentCommand: ''
+    }
+  }
+
+  componentDidMount() {
+    this.commandLineInput.current.focus();
+    this.commandLineInput.current.select();
   }
 
   renderPreviousInteractions = () => {
@@ -90,8 +100,8 @@ class CommandLine extends React.Component {
         {this.renderPreviousInteractions()}
         <CommandPrompt pathname={pathname}/>
         <CommandLineForm onSubmit={this.handleCommandSubmit}>
-          >> <input type="text" value={currentCommand} onChange={this.handleCommandChange}/>
-      </CommandLineForm>
+          >> <input ref={this.commandLineInput} type="text" value={currentCommand} onChange={this.handleCommandChange}/>
+        </CommandLineForm>
       </React.Fragment>
     );
   }

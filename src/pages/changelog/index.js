@@ -1,9 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import styled from '@emotion/styled';
 
 import SEO from 'src/components/seo';
 import CommandPrompt from 'src/shared-components/commandPrompt';
+
+import { ChangelogSection } from './style';
 
 const ChangelogPage = ({ data }) => {
   const { html } = data.markdownRemark;
@@ -25,12 +26,6 @@ export const pageQuery = graphql`
         contentType,
       }
     }
-  }
-`;
-
-const ChangelogSection = styled.section`
-  h1 {
-
   }
 `;
 
