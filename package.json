@@ -1,0 +1,54 @@
+{
+  "name": "yihwans-gatsby-starter",
+  "private": true,
+  "description": "Yihwan's Gatsby Starter",
+  "version": "0.1.0",
+  "author": "Yihwan Kim <hi@yihwan.kim>",
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "gatsby": "^2.3.27",
+    "gatsby-background-image": "^0.5.6",
+    "gatsby-image": "^2.0.40",
+    "gatsby-plugin-emotion": "^4.0.6",
+    "gatsby-plugin-layout": "^1.0.15",
+    "gatsby-plugin-lodash": "^3.0.5",
+    "gatsby-plugin-manifest": "^2.0.29",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-remove-trailing-slashes": "^2.0.11",
+    "gatsby-plugin-sharp": "^2.0.35",
+    "gatsby-source-filesystem": "^2.0.31",
+    "gatsby-source-graphql": "^2.0.18",
+    "gatsby-transformer-remark": "^2.3.12",
+    "gatsby-transformer-sharp": "^2.1.18",
+    "intersection-observer": "^0.6.0",
+    "jest": "^24.7.1",
+    "jest-emotion": "^10.0.10",
+    "lodash.throttle": "^4.1.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0",
+    "string-similarity": "^3.0.0"
+  },
+  "devDependencies": {
+    "gatsby-plugin-root-import": "^2.0.5",
+    "prettier": "^1.17.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Yihwan/gatsby-starter"
+  }
+}
