@@ -23,14 +23,14 @@ const FONT_SIZE = {
 };
 
 const FONT_FAMILY = {
-  primary: 'serif',
+  primary: 'Roboto Mono, monospace',
   secondary: 'mono',
 }
 
 const displayStyle = css`
   font-size: ${FONT_SIZE.displaySmall};
   font-family: ${FONT_FAMILY.primary};
-  color: ${COLORS.primaryBlack};
+  color: ${COLORS.terminalWhite};
 
   ${MEDIA_QUERIES.mdUp} {
     font-size: ${FONT_SIZE.displayLarge};
@@ -40,7 +40,7 @@ const displayStyle = css`
 const headingStyle = css`
   font-size: ${FONT_SIZE.headingSmall};
   font-family: ${FONT_FAMILY.primary};
-  color: ${COLORS.primaryBlack};
+  color: ${COLORS.terminalWhite};
   font-weight: 600;
 
   ${MEDIA_QUERIES.mdUp} {
@@ -51,7 +51,7 @@ const headingStyle = css`
 const titleStyle = css`
   font-size: ${FONT_SIZE.titleSmall};
   font-family: ${FONT_FAMILY.primary};
-  color: ${COLORS.primaryBlack};
+  color: ${COLORS.terminalWhite};
 
   ${MEDIA_QUERIES.mdUp} {
     font-size: ${FONT_SIZE.titleLarge};
@@ -61,7 +61,7 @@ const titleStyle = css`
 const captionStyle = css`
   font-size: ${FONT_SIZE.captionSmall};
   font-family: ${FONT_FAMILY.secondary};
-  color: ${COLORS.primaryBlack};
+  color: ${COLORS.terminalWhite};
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 700;
@@ -74,7 +74,7 @@ const captionStyle = css`
 const pStyle = css`
   font-size: ${FONT_SIZE.bodySmall};
   font-family: ${FONT_FAMILY.primary};
-  color: ${COLORS.primaryBlack};
+  color: ${COLORS.terminalWhite};
   line-height: 1.5;
   letter-spacing: .1px;
   ${MEDIA_QUERIES.mdUp} {

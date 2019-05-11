@@ -1,4 +1,5 @@
 import { css } from '@emotion/core';
+import { Typography, COLORS } from 'src/styles/constants';
 
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
@@ -50,9 +51,10 @@ export const resetStyles = css`
   }
 `;
 
-// TODO: Add site-specific styles here.
 export const brandStyles = css`
-  body {
-
+  html {
+    font-family: ${Typography.FONT_FAMILY.primary};
+    color: white;
+    background-color: ${COLORS.terminalBlack};
   }
 `;
