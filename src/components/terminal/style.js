@@ -4,21 +4,17 @@ import { COLORS, MEDIA_QUERIES, SPACER, Typography } from 'src/styles/constants'
 export const TerminalContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-height: 600px;
-  width: 100%;
   max-width: 720px;
+  height: 90vh;
   line-height: 1.5;
   font-size: 0.75rem;
 
   ${MEDIA_QUERIES.mdUp} {
     font-size: 0.875rem;
-    width: 90%;
   }
 
   ${MEDIA_QUERIES.xlUp} {
     max-width: 760px;
-    width: 95%;
   }
 `;
 
@@ -56,7 +52,7 @@ export const TerminalMenuHeader = styled.div`
 `;
 
 export const TerminalBody = styled.div`
-  height: 100%;
+  height 100%;
   border-radius: 0 0 4px 4px;
   background-color: ${COLORS.darkGrey};
 

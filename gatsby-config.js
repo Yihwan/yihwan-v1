@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: "Yihwan Kim",
@@ -8,12 +10,18 @@ module.exports = {
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-layout',
-    'gatsby-plugin-root-import',
     'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-lodash',
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        src: path.join(__dirname, 'src'),
+        content: path.join(__dirname, 'content')
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
-import { Typography } from 'src/styles/constants';
+import { Typography, SPACER } from 'src/styles/constants';
 
 export const HeaderContainer = styled.header`
+  position: relative;
+  top: 15%;
 `;
 
 export const Greeting = styled.h1`
@@ -12,18 +14,21 @@ export const Greeting = styled.h1`
 `;
 
 export const IntroSnippet = styled.h2`
+  font-size: 1.35rem;
+  line-height: 1.85rem;
+  margin-top: ${SPACER.base};
+  margin-right: ${SPACER.desktopGutter};
 `;
 
 export const WaveContainer = styled.div`
   display: inline-block;
-  animation: rotation 0.8s 2 ease-out;
-
+  animation: rotation 0.8s 3 ease-out;
   @keyframes rotation {
-  50% {
-    transform: rotate(30deg);
+    50% {
+      transform: rotate(30deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
   }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 `;

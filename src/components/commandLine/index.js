@@ -7,6 +7,7 @@ import stringSimilarity from 'string-similarity';
 
 import CommandPrompt from 'src/shared-components/commandPrompt';
 
+import HelpModule from './helpModule';
 import {
   CommandLineForm, CommandError,
 } from './style';
@@ -46,21 +47,24 @@ class CommandLine extends React.Component {
         <CommandPrompt pathname={pathname}/>
         <div>>> {interaction.command}</div>
         {interaction.errorMessage && <CommandError><span>error:</span> {interaction.errorMessage}</CommandError>}
+        {interaction.output}
       </div>
     ));
   }
 
-  populatePreviousInteractions = (currentCommand, errorMessage) => {
+  populatePreviousInteractions = (currentCommand, errorMessage, output) => {
     const interaction = {
       command: currentCommand,
     };
     interaction.errorMessage = errorMessage;
+    interaction.output = output;
 
     this.setState(prevState => ({
       previousInteractions: [...prevState.previousInteractions, interaction],
     }));
   }
 
+  // TODO: Refactor to separate class and command hash.
   handleCommandSubmit = event => {
     event.preventDefault();
     let errorMessage = null;
@@ -77,6 +81,16 @@ class CommandLine extends React.Component {
     if ((currentCommand === currentPath) || (currentCommand === 'home' && currentPath === '/')) {
       errorMessage = `Current page is already ${capitalize(currentCommand)}`;
       this.populatePreviousInteractions(currentCommand, errorMessage);
+      return;
+    }
+
+    if (currentCommand === 'help') {
+      this.populatePreviousInteractions(currentCommand, null, <HelpModule />);
+      return;
+    }
+
+    if (currentCommand === 'clear') {
+      this.setState({ previousInteractions: [] });
       return;
     }
 

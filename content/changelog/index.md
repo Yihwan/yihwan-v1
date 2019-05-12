@@ -31,7 +31,7 @@ contentType: 'changelog'
     <span class="changelog-headline">Joined Argive</span>
   </div>
   <div class="changelog-content">
-    Doubled down on software development after dabbling for a while. Dealt with government regulations, so I had plenty of (unstructured and confusing) data to work with.
+    Doubled down on software development after dabbling for a while. 
   </div>
 </div>
 
@@ -111,7 +111,7 @@ contentType: 'changelog'
     <span class="changelog-headline">Moved to San Francisco</span>
   </div>
   <div class="changelog-content">
-    Lucked out with a place two blocks south of the Lyon Street steps. If you haven't been, you should check it out.
+    Lucked out with a place two blocks south of the Lyon Street steps.
   </div>
 </div>
 
@@ -172,16 +172,6 @@ contentType: 'changelog'
   </div>
   <div class="changelog-content">
     - on a whirlwind, hyper-supervised bus tour of Europe. 3/10 would recommend to a friend.
-  </div>
-</div>
-
-<div class="changelog-item">
-  <div class="changelog-header">
-    <span class="changelog-date">[2006-Q2]</span>
-    <span class="changelog-headline">Boarded a flight for the first time</span>
-  </div>
-  <div class="changelog-content">
-    It was an AA flight out of LAX, and they served plasticized ham and cheese sandwiches. But it was magical all the same.
   </div>
 </div>
 

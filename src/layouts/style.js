@@ -1,17 +1,15 @@
 import styled from '@emotion/styled';
-import { MEDIA_QUERIES, SPACER } from 'src/styles/constants';
+import { MEDIA_QUERIES, SPACER, BREAKPOINTS } from 'src/styles/constants';
 
 export const LayoutContainer = styled.main`
-  position: absolute;
-  height: 100%;
-  width: 100%;
-
-
+  max-width: ${BREAKPOINTS.max}px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 
   ${MEDIA_QUERIES.xlUp} {
     flex-direction: row;
+    padding: ${SPACER.x2large} ${SPACER.desktopGutter};
   }
 
   > section {
