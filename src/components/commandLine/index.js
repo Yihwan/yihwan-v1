@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PAGE_URLS from 'src/constants/pageUrls';
-import { capitalize, lowercase } from 'lodash';
+import { capitalize, toLower } from 'lodash';
 import { navigate } from 'gatsby';
 import stringSimilarity from 'string-similarity';
 
@@ -31,6 +31,12 @@ class CommandLine extends React.Component {
     this.commandLineInput.current.select();
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.pathname !== this.props.pathname) {
+      this.setState({ previousInteractions: [] });
+    }
+  }
+
   renderPreviousInteractions = () => {
     const { pathname } = this.props;
     const { previousInteractions } = this.state;
@@ -58,13 +64,17 @@ class CommandLine extends React.Component {
   handleCommandSubmit = event => {
     event.preventDefault();
     let errorMessage = null;
-    const currentCommand = lowercase(this.state.currentCommand);
-    const currentPath = lowercase(this.props.pathname);
-    const availableRoutes = Object.keys(PAGE_URLS).map(page => lowercase(page));
+    const currentCommand = toLower(this.state.currentCommand);
+    const currentPath = toLower(this.props.pathname);
+    const availableRoutes = Object.keys(PAGE_URLS).map(page => toLower(page));
     this.setState({ currentCommand: '' });
 
-    if ((currentCommand === currentPath) || (currentCommand === 'home' && currentPath === '')) {
-      console.log(currentPath);
+    if (currentCommand === '') {
+      this.populatePreviousInteractions(currentCommand);
+      return;
+    }
+
+    if ((currentCommand === currentPath) || (currentCommand === 'home' && currentPath === '/')) {
       errorMessage = `Current page is already ${capitalize(currentCommand)}`;
       this.populatePreviousInteractions(currentCommand, errorMessage);
       return;
@@ -72,7 +82,6 @@ class CommandLine extends React.Component {
 
     if (availableRoutes.includes(currentCommand)) {
       navigate(`/${PAGE_URLS[currentCommand]}`);
-      this.setState({ previousInteractions: [] });
       return;
     }
 

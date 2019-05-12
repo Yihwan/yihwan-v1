@@ -23,11 +23,11 @@ class Navigation extends React.Component {
     const linkArray = this.renderPageLinks();
 
     return(
-      <div>
+      <nav>
         Type or click where to go next: <br />
         <StyledArray array={linkArray} />
         Or type "help" at any time to view all options.
-      </div>
+      </nav>
     );
   }
 }
