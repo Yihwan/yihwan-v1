@@ -72,7 +72,7 @@ class Layout extends React.Component {
     }
 
     return(
-      <React.Fragment>
+      <LayoutContainer>
         {injectGlobalStyles()}
         {!isTerminalDisplayedOnMobile && <MobileSplashContainer>
           <Header />
@@ -94,7 +94,7 @@ class Layout extends React.Component {
             <CommandLine pathname={pathname}/>
           </Terminal>
         }
-      </React.Fragment>
+      </LayoutContainer>
     );
   }
 }
