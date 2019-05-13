@@ -4,19 +4,19 @@ import { COLORS, MEDIA_QUERIES, SPACER, Typography } from 'src/styles/constants'
 export const TerminalContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 720px;
   width: 100%;
+  max-width: 720px;
+  height: 100%;
+  max-height: 1000px;
   line-height: 1.5;
   font-size: 0.75rem;
 
   position: absolute;
   z-index: 2;
-
-  height: 90vh;
-  max-height: 1000px;
   margin: auto;
 
   ${MEDIA_QUERIES.mdUp} {
+    height: 90vh;
     font-size: 0.875rem;
     position: unset;
   }

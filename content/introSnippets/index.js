@@ -2,7 +2,7 @@ import { shuffle } from 'lodash';
 
 const firstIntroSnippet = [
   `I'm a software engineer at <a href="https://curology.com" target="_blank" rel="noopener noreferrer">Curology</a>.`,
-  `I like working with React, Laravel, Rails, and LEGO.`,
+  `I like working with React, Gatsby, Laravel, Rails, and LEGO.`,
 ];
 let introSnippets = [
   `I'm a Redux skeptic.`,

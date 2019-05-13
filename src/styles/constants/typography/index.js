@@ -41,14 +41,14 @@ const displayStyle = css`
 
 const headingStyle = css`
   font-size: ${FONT_SIZE.headingSmall};
-  line-height: 1.35rem;
+  line-height: 1.35;
   font-family: ${FONT_FAMILY.primary};
   color: ${COLORS.terminalWhite};
   font-weight: 600;
 
   ${MEDIA_QUERIES.mdUp} {
     font-size: ${FONT_SIZE.headingLarge};
-    line-height: 1.85rem;
+    line-height: 1.5;
   }
 `;
 

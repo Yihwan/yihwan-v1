@@ -1,9 +1,6 @@
 # [yihwan.kim](http://yihwan.kim) redesign (in progress)
 
 ### To Do's
-* Fix Terminal width on mobile.
-* Strip quotes from commands.
-* Fix changelog styling.
 * Consider max dimensions on large high-res screens.
 * Refactor command line logic into separate class.
 * Clean-up typography/colors constants.

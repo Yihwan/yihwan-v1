@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { COLORS } from 'src/styles/constants';
+import { COLORS, SPACER, MEDIA_QUERIES } from 'src/styles/constants';
 
 export const ChangelogSection = styled.section`
 
@@ -10,14 +10,23 @@ export const ChangelogSection = styled.section`
   }
 
   .changelog-item {
+    display: flex;
     margin-top: 1.5rem;
+
+    .changelog-date {
+      flex: 0 0 auto;
+    }
 
     .changelog-header {
       color: ${COLORS.terminalYellow};
     }
 
     .changelog-content {
-      margin-left: 84px;
+      margin-left: ${SPACER.base};
+
+      ${MEDIA_QUERIES.mdUp} {
+        margin-left: ${SPACER.large};
+      }
     }
   }
 `;

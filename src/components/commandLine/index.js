@@ -68,7 +68,7 @@ class CommandLine extends React.Component {
   handleCommandSubmit = event => {
     event.preventDefault();
     let errorMessage = null;
-    const currentCommand = toLower(this.state.currentCommand);
+    const currentCommand = toLower(this.state.currentCommand).replace(/"|'|`/gi, '');
     const currentPath = toLower(this.props.pathname);
     const availableRoutes = Object.keys(PAGE_URLS).map(page => toLower(page));
     this.setState({ currentCommand: '' });
