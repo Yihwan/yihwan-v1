@@ -21,7 +21,7 @@ let introSnippets = [
   `I think we should be <a href="https://www.strava.com/athletes/yihwan" target="_blank" rel="noopener noreferrer">Strava</a> friends.`,
   `I'm wary of La Croix.`,
   `I'm a fan of non-fiction that reads like fiction.`,
-  `I'd take mountains over beaches, cold over heat, and snow over sun.`,
+  `I'd take mountains over beaches, ^500 cold over heat, ^500 and snow over sun.`,
 ];
 const lastIntroSnippet = [`I've run out of things to say. ^1000 Are you still here? <span role="img" aria-label="thinking-face"> 🤔</span>^2000`];
 
