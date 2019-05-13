@@ -42,8 +42,8 @@ class CommandLine extends React.Component {
     const { pathname } = this.props;
     const { previousInteractions } = this.state;
 
-    return previousInteractions.map(interaction => (
-      <div>
+    return previousInteractions.map((interaction, idx) => (
+      <div key={`${interaction.command}-${idx}`}>
         <CommandPrompt pathname={pathname}/>
         <div>>> {interaction.command}</div>
         {interaction.errorMessage && <CommandError><span>error:</span> {interaction.errorMessage}</CommandError>}

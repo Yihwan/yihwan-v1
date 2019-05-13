@@ -5,16 +5,42 @@ export const TerminalContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 720px;
-  height: 90vh;
+  width: 100%;
   line-height: 1.5;
   font-size: 0.75rem;
 
+  position: absolute;
+  z-index: 2;
+
+  height: 90vh;
+  max-height: 1000px;
+  margin: auto;
+
   ${MEDIA_QUERIES.mdUp} {
     font-size: 0.875rem;
+    position: unset;
   }
 
   ${MEDIA_QUERIES.xlUp} {
     max-width: 760px;
+  }
+`;
+
+export const TerminalBody = styled.div`
+  border-radius: 0 0 4px 4px;
+  height: 100%;
+
+  background-color: ${COLORS.darkGrey};
+
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 50px 100px rgba(65, 65, 74, .2);
+  box-shadow: 0 15px 35px rgba(65, 65, 74, .3);
+  box-shadow: 0 5px 15px rgba(0,0,0,.2);
+
+  padding: ${SPACER.small};
+  ${MEDIA_QUERIES.mdUp} {
+    padding: ${SPACER.medium};
   }
 `;
 
@@ -29,12 +55,18 @@ export const TerminalMenuBar = styled.div`
 `;
 
 export const TerminalMenuButton = styled.div`
+  position: relative;
+  z-index: 4;
   height: 0.75rem;
   width: 0.75rem;
   border: 1px solid ${props => props.border};
   border-radius: 50%;
   background-color: ${props => props.background};
   margin-left: 0.5rem;
+
+  ${MEDIA_QUERIES.lgUp} {
+    cursor: not-allowed;
+  }
 `;
 
 export const TerminalMenuHeader = styled.div`
@@ -48,22 +80,5 @@ export const TerminalMenuHeader = styled.div`
 
   ${MEDIA_QUERIES.smUp} {
     font-size: 0.75rem;
-  }
-`;
-
-export const TerminalBody = styled.div`
-  height 100%;
-  border-radius: 0 0 4px 4px;
-  background-color: ${COLORS.darkGrey};
-
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  box-shadow: 0 50px 100px rgba(65, 65, 74, .2);
-  box-shadow: 0 15px 35px rgba(65, 65, 74, .3);
-  box-shadow: 0 5px 15px rgba(0,0,0,.2);
-
-  padding: ${SPACER.small};
-  ${MEDIA_QUERIES.mdUp} {
-    padding: ${SPACER.medium};
   }
 `;

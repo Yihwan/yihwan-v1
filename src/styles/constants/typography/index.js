@@ -6,10 +6,10 @@ import MEDIA_QUERIES from '../mediaQueries';
 
 const FONT_SIZE = {
   displaySmall: '2rem',
-  displayLarge: '2.25rem',
+  displayLarge: '3rem',
 
-  headingSmall: '1.5rem',
-  headingLarge: '1.75rem',
+  headingSmall: '1rem',
+  headingLarge: '1.25rem',
 
   titleSmall: '1.25rem',
   titleLarge: '1.5rem',
@@ -29,8 +29,10 @@ const FONT_FAMILY = {
 
 const displayStyle = css`
   font-size: ${FONT_SIZE.displaySmall};
-  font-family: ${FONT_FAMILY.primary};
+  font-family: ${FONT_FAMILY.system};
   color: ${COLORS.terminalWhite};
+  font-weight: 700;
+  letter-spacing: 1px;
 
   ${MEDIA_QUERIES.mdUp} {
     font-size: ${FONT_SIZE.displayLarge};
@@ -39,12 +41,14 @@ const displayStyle = css`
 
 const headingStyle = css`
   font-size: ${FONT_SIZE.headingSmall};
+  line-height: 1.35rem;
   font-family: ${FONT_FAMILY.primary};
   color: ${COLORS.terminalWhite};
   font-weight: 600;
 
   ${MEDIA_QUERIES.mdUp} {
     font-size: ${FONT_SIZE.headingLarge};
+    line-height: 1.85rem;
   }
 `;
 

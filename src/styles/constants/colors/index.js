@@ -14,6 +14,8 @@ const COLORS = {
   borderRed: '#f65549',
   borderYellow: '#ffb524',
   borderGreen: '#2dbb41',
+  buttonDisabled: '#d0d0d0',
+  borderDisabled: '#d6d3d6',
 }
 
 export default COLORS;

@@ -1,23 +1,23 @@
 import styled from '@emotion/styled';
-import { Typography, SPACER } from 'src/styles/constants';
+import { Typography, SPACER, MEDIA_QUERIES } from 'src/styles/constants';
 
 export const HeaderContainer = styled.header`
-  position: relative;
-  top: 15%;
+  ${MEDIA_QUERIES.mdUp} {
+    margin-right: ${SPACER.desktopGutter};
+    margin-top: ${SPACER.desktopGutter};
+  }
 `;
 
-export const Greeting = styled.h1`
-  font-family: ${Typography.FONT_FAMILY.system};
-  font-weight: 700;
-  font-size: 3.5rem;
-  letter-spacing: 1px;
+export const Greeting = styled(Typography.Display)`
+
 `;
 
-export const IntroSnippet = styled.h2`
-  font-size: 1.35rem;
-  line-height: 1.85rem;
-  margin-top: ${SPACER.base};
-  margin-right: ${SPACER.desktopGutter};
+export const IntroSnippet = styled(Typography.Heading)`
+
+  margin-top: ${SPACER.small};
+  ${MEDIA_QUERIES.lgUp} {
+    margin-top: ${SPACER.base};
+  }
 `;
 
 export const WaveContainer = styled.div`

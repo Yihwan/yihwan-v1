@@ -24,7 +24,7 @@ export const combinedSnippets = firstIntroSnippet.concat(shuffle(introSnippets),
 export const typewriterOptions = {
   strings: combinedSnippets,
   typeSpeed: 15,
-  backDelay: 3500,
+  backDelay: 3000,
   showCursor: false,
   loop: true,
 };
