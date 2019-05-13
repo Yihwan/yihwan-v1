@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import SEO from 'src/components/seo';
 import CommandPrompt from 'src/shared-components/commandPrompt';
 
-import { ChangelogSection } from './style';
+import { ChangelogSection } from './_style';
 
 const ChangelogPage = ({ data }) => {
   const { html } = data.markdownRemark;
