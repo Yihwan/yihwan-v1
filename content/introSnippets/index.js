@@ -10,12 +10,18 @@ let introSnippets = [
   `I've developed PTSD from UberConference hold music.`,
   `I'm from LA, but have lived in SF and NYC. ^1000 I'm currently back in SF.`,
   `I've been passively 'looking' for my own apartment for the past two years, ^500 so let me know if you've got any leads.`,
-  `I once boarded the wrong flight destined for the wrong continent... ^1000 and only found out because I was in someone else's seat.`,
+  `I once boarded the wrong flight destined for the wrong continent... ^1000 and only found out because I was in somebody's seat.`,
   `I've visited or lived in 58% of the countries in South America.`,
   `I've been to Hong Kong exactly once. ^1000 It was probably a beautiful city ^500 - I couldn't really tell because I left my contacts at home.`,
   `When I speak Spanish, native Spanish-speakers think I'm Brazilian. ^1000 When I speak Portuguese, Brazilians think I'm Mexican.`,
   `My shameful, disgusting food pleasure is cheap supermarket 'sushi' ^1000 - the kind with flourescent orange crab-like product ^500 surrounded by a sticky sweet gelatinous gob of 'rice'.`,
   `I miss Anthony Bourdain.`,
+  `I think <em>Bronston v. United States</em> (1973) makes for an interesting read.`,
+  `My favorite design tool is Kid Pix.`,
+  `I think we should be <a href="https://www.strava.com/athletes/yihwan" target="_blank" rel="noopener noreferrer">Strava</a> friends.`,
+  `I'm wary of La Croix.`,
+  `I'm a fan of non-fiction that reads like fiction.`,
+  `I'd take mountains over beaches, cold over heat, and snow over sun.`,
 ];
 const lastIntroSnippet = [`I've run out of things to say. ^1000 Are you still here? <span role="img" aria-label="thinking-face"> 🤔</span>^2000`];
 
