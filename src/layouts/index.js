@@ -17,11 +17,12 @@ class Layout extends React.Component {
   }
 
   state = {
-    isDesktop: isLargeViewport(),
+    isDesktop: null,
     isTerminalDisplayedOnMobile: false,
   }
 
   componentDidMount() {
+    this.setState({ isDesktop: isLargeViewport() });
     window.addEventListener('resize', this.handleResize);
   }
 
@@ -47,8 +48,11 @@ class Layout extends React.Component {
     const { children, location } = this.props;
     const { isDesktop, isTerminalDisplayedOnMobile } = this.state;
     const { pathname } = location;
-    // TODO: Remove after testing. 
-    console.log(isDesktop);
+
+    if (isDesktop === null) {
+      return <div>Loading ...</div>;
+    }
+
     return(
       <LayoutContainer>
         <ContentContainer>
