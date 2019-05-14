@@ -8,7 +8,12 @@ import Terminal from 'src/components/terminal';
 import injectGlobalStyles from '../utils/injectGlobalStyles';
 import { isLargeViewport } from '../utils/viewportSizing';
 import {
-  LayoutContainer, ContentContainer, TerminalContentContainer, MobileSplashContainer, ToggleTerminalButton,
+  LoadingContainer,
+  LayoutContainer,
+  ContentContainer,
+  TerminalContentContainer,
+  MobileSplashContainer,
+  ToggleTerminalButton,
 } from './style';
 
 class Layout extends React.Component {
@@ -50,7 +55,11 @@ class Layout extends React.Component {
     const { pathname } = location;
 
     if (isDesktop === null) {
-      return <div>Loading ...</div>;
+      return(
+        <LoadingContainer>
+          <div><span role="img" aria-label="face-with-monocle">🧐</span></div>
+        </LoadingContainer>
+      );
     }
 
     return(

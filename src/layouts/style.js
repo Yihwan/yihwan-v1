@@ -3,6 +3,30 @@ import {
   MEDIA_QUERIES, SPACER, BREAKPOINTS, COLORS, Typography,
  } from 'src/styles/constants';
 
+export const LoadingContainer = styled.div`
+  font-size: 2rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > div {    
+    animation: zoomInAndOut 1s infinite;
+
+    @keyframes zoomInAndOut {
+      0% {
+        transform: scale(1,1);
+      }
+      50% {
+        transform: scale(1.5,1.5);
+      }
+      100% {
+        transform: scale(1,1);
+      }
+    }
+  }
+`;
+
 export const LayoutContainer = styled.main`
   height: 100vh;
   display: flex;
