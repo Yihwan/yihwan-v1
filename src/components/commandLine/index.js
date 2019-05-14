@@ -30,8 +30,7 @@ class CommandLine extends React.Component {
   }
 
   componentDidMount() {
-    const shouldAutoFocusOnInput = this.state.isLargeViewport && this.state.isLargeViewport !== 'loading';
-    if (shouldAutoFocusOnInput) {
+    if (this.state.isLargeViewport) {
       this.commandLineInput.current.focus();
       this.commandLineInput.current.select();
     }

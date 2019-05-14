@@ -47,11 +47,8 @@ class Layout extends React.Component {
     const { children, location } = this.props;
     const { isDesktop, isTerminalDisplayedOnMobile } = this.state;
     const { pathname } = location;
+    // TODO: Remove after testing. 
     console.log(isDesktop);
-    if ( isDesktop === 'loading' ) {
-      return;
-    }
-
     return(
       <LayoutContainer>
         <ContentContainer>
