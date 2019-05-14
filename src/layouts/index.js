@@ -48,6 +48,11 @@ class Layout extends React.Component {
     const { isDesktop, isTerminalDisplayedOnMobile } = this.state;
     const { pathname } = location;
 
+    // TODO: Hacky fix to ensure isDesktop is set.
+    if (isDesktop === undefined) {
+      return;
+    }
+
     if (isDesktop) {
       return(
         <LayoutContainer>

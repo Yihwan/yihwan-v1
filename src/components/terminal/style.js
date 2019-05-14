@@ -12,7 +12,6 @@ export const TerminalContainer = styled.div`
   font-size: 0.75rem;
 
   position: absolute;
-  z-index: 2;
   margin: auto;
 
   ${MEDIA_QUERIES.mdUp} {
