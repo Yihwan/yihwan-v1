@@ -3,14 +3,14 @@ import { COLORS, Typography, MEDIA_QUERIES } from 'src/styles/constants';
 
 export const CommandLineForm = styled.form`
   input[type="text"] {
-    background-color: ${COLORS.darkGrey};
-    color: ${COLORS.terminalWhite};
     border: 0;
     font-family: ${Typography.FONT_FAMILY.primary};
-    font-size: 0.75rem;
+    background-color: ${COLORS.darkGrey};
+    color: ${COLORS.terminalWhite};
     caret-color: ${COLORS.terminalGreen};
+    font-size: 0.75rem;
 
-    ${MEDIA_QUERIES.mdUp} {
+    ${MEDIA_QUERIES.lgUp} {
       font-size: 0.875rem;
       width: 90%;
     }

@@ -24,7 +24,7 @@ export const ChangelogSection = styled.section`
     .changelog-content {
       margin-left: ${SPACER.base};
 
-      ${MEDIA_QUERIES.mdUp} {
+      ${MEDIA_QUERIES.lgUp} {
         margin-left: ${SPACER.large};
       }
     }

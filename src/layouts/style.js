@@ -10,18 +10,27 @@ export const LayoutContainer = styled.main`
 `;
 
 export const ContentContainer = styled.div`
-  position: relative;
-  max-width: ${BREAKPOINTS.max}px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  flex: auto;
-
   > section {
-    flex: 1;
+    height: 100vh;
   }
 
-  padding: ${SPACER.xlarge} ${SPACER.x5Large};
+  ${MEDIA_QUERIES.lgUp} {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: ${BREAKPOINTS.max}px;
+    margin: 0 auto;
+    flex-direction: row;
+    flex: auto;
+
+    > section {
+      height: unset;
+      flex: 1;
+    }
+
+    padding: ${SPACER.xlarge} ${SPACER.x5Large};
+  }
+
   ${MEDIA_QUERIES.xlUp} {
     padding: ${SPACER.x2large} ${SPACER.desktopGutter};
   }
@@ -39,10 +48,6 @@ export const MobileSplashContainer = styled.main`
 
   ${MEDIA_QUERIES.smUp} {
     padding: ${SPACER.large} ${SPACER.desktopGutter};
-  }
-
-  ${MEDIA_QUERIES.mdUp} {
-    position: unset;
   }
 `;
 

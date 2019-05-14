@@ -5,7 +5,7 @@ export const TerminalContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 720px;
+  max-width: 768px;
   height: 100%;
   max-height: 1000px;
   line-height: 1.5;
@@ -14,14 +14,14 @@ export const TerminalContainer = styled.div`
   position: absolute;
   margin: auto;
 
-  ${MEDIA_QUERIES.mdUp} {
+  ${MEDIA_QUERIES.lgUp} {
     height: 90vh;
     font-size: 0.875rem;
     position: unset;
   }
 
   ${MEDIA_QUERIES.xlUp} {
-    max-width: 760px;
+    max-width: 800px;
   }
 `;
 
@@ -38,7 +38,7 @@ export const TerminalBody = styled.div`
   box-shadow: 0 5px 15px rgba(0,0,0,.2);
 
   padding: ${SPACER.small};
-  ${MEDIA_QUERIES.mdUp} {
+  ${MEDIA_QUERIES.lgUp} {
     padding: ${SPACER.medium};
   }
 `;

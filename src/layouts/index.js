@@ -6,7 +6,7 @@ import Navigation from 'src/components/navigation';
 import CommandLine from 'src/components/commandLine';
 import Terminal from 'src/components/terminal';
 import injectGlobalStyles from '../utils/injectGlobalStyles';
-import { isMediumViewport } from '../utils/viewportSizing';
+import { isLargeViewport } from '../utils/viewportSizing';
 import {
   LayoutContainer, ContentContainer, TerminalContentContainer, MobileSplashContainer, ToggleTerminalButton,
 } from './style';
@@ -17,7 +17,7 @@ class Layout extends React.Component {
   }
 
   state = {
-    isDesktop: isMediumViewport(),
+    isDesktop: isLargeViewport(),
     isTerminalDisplayedOnMobile: false,
   }
 
@@ -32,8 +32,8 @@ class Layout extends React.Component {
   handleResize = () => {
     const { isDesktop } = this.state;
 
-    if (isDesktop !== isMediumViewport()){
-      this.setState({ isDesktop: isMediumViewport() })
+    if (isDesktop !== isLargeViewport()){
+      this.setState({ isDesktop: isLargeViewport() })
     }
   };
 
@@ -47,58 +47,46 @@ class Layout extends React.Component {
     const { children, location } = this.props;
     const { isDesktop, isTerminalDisplayedOnMobile } = this.state;
     const { pathname } = location;
-
-    // TODO: Hacky fix to ensure isDesktop is set.
-    if (isDesktop === undefined) {
+    console.log(isDesktop);
+    if ( isDesktop === 'loading' ) {
       return;
-    }
-
-    if (isDesktop) {
-      return(
-        <LayoutContainer>
-          {injectGlobalStyles()}
-          <ContentContainer>
-            <section>
-              <Header />
-            </section>
-
-            <section>
-              <Terminal isDesktop={isDesktop} pathname={pathname}>
-                <Navigation pathname={pathname}/>
-                <TerminalContentContainer>
-                  {children}
-                </TerminalContentContainer>
-                <CommandLine pathname={pathname}/>
-              </Terminal>
-            </section>
-          </ContentContainer>
-        </LayoutContainer>
-      );
     }
 
     return(
       <LayoutContainer>
+        <ContentContainer>
         {injectGlobalStyles()}
-        {!isTerminalDisplayedOnMobile && <MobileSplashContainer>
-          <Header />
-          <ToggleTerminalButton onClick={this.toggleMobileTerminalDisplay}>
-            Open Terminal
-          </ToggleTerminalButton>
-        </MobileSplashContainer>}
+        {(!isDesktop && !isTerminalDisplayedOnMobile) && (
+          <MobileSplashContainer>
+            <Header />
+            <ToggleTerminalButton onClick={this.toggleMobileTerminalDisplay}>
+              Open Terminal
+            </ToggleTerminalButton>
+          </MobileSplashContainer>
+        )}
 
-        {isTerminalDisplayedOnMobile &&
-          <Terminal
-            closeTerminal={this.toggleMobileTerminalDisplay}
-            isDesktop={isDesktop}
-            pathname={pathname}
-          >
-            <Navigation pathname={pathname}/>
-            <TerminalContentContainer>
-              {children}
-            </TerminalContentContainer>
-            <CommandLine pathname={pathname}/>
-          </Terminal>
-        }
+        {(isDesktop && !isTerminalDisplayedOnMobile) && (
+          <section>
+            <Header />
+          </section>
+        )}
+
+        {(isDesktop || isTerminalDisplayedOnMobile) && (
+          <section>
+            <Terminal
+              closeTerminal={this.toggleMobileTerminalDisplay}
+              isDesktop={isDesktop}
+              pathname={pathname}
+              >
+              <Navigation pathname={pathname}/>
+              <TerminalContentContainer>
+                {children}
+              </TerminalContentContainer>
+              <CommandLine pathname={pathname}/>
+            </Terminal>
+          </section>
+        )}
+        </ContentContainer>
       </LayoutContainer>
     );
   }

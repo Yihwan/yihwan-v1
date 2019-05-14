@@ -6,6 +6,7 @@ import { navigate } from 'gatsby';
 import stringSimilarity from 'string-similarity';
 
 import CommandPrompt from 'src/shared-components/commandPrompt';
+import { isLargeViewport } from 'src/utils/viewportSizing';
 
 import HelpModule from './helpModule';
 import {
@@ -23,13 +24,17 @@ class CommandLine extends React.Component {
 
     this.state = {
       previousInteractions: [],
-      currentCommand: ''
+      currentCommand: '',
+      isLargeViewport: isLargeViewport(),
     }
   }
 
   componentDidMount() {
-    this.commandLineInput.current.focus();
-    this.commandLineInput.current.select();
+    const shouldAutoFocusOnInput = this.state.isLargeViewport && this.state.isLargeViewport !== 'loading';
+    if (shouldAutoFocusOnInput) {
+      this.commandLineInput.current.focus();
+      this.commandLineInput.current.select();
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -68,7 +73,7 @@ class CommandLine extends React.Component {
   handleCommandSubmit = event => {
     event.preventDefault();
     let errorMessage = null;
-    const currentCommand = toLower(this.state.currentCommand).replace(/"|'|`/gi, '');
+    const currentCommand = toLower(this.state.currentCommand).replace(/\s|"|'|`/gi, '');
     const currentPath = toLower(this.props.pathname);
     const availableRoutes = Object.keys(PAGE_URLS).map(page => toLower(page));
     this.setState({ currentCommand: '' });
@@ -123,7 +128,8 @@ class CommandLine extends React.Component {
         {this.renderPreviousInteractions()}
         <CommandPrompt pathname={pathname}/>
         <CommandLineForm onSubmit={this.handleCommandSubmit}>
-          >> <input ref={this.commandLineInput} type="text" value={currentCommand} onChange={this.handleCommandChange}/>
+          <label htmlFor="command">>> </label>
+          <input ref={this.commandLineInput} name="command" type="text" value={currentCommand} onChange={this.handleCommandChange}/>
         </CommandLineForm>
       </React.Fragment>
     );

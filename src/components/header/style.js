@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Typography, SPACER, MEDIA_QUERIES } from 'src/styles/constants';
 
 export const HeaderContainer = styled.header`
-  ${MEDIA_QUERIES.mdUp} {
+  ${MEDIA_QUERIES.lgUp} {
     margin-right: ${SPACER.desktopGutter};
     margin-top: ${SPACER.desktopGutter};
   }
