@@ -40,6 +40,10 @@ export const MobileSplashContainer = styled.main`
   ${MEDIA_QUERIES.smUp} {
     padding: ${SPACER.large} ${SPACER.desktopGutter};
   }
+
+  ${MEDIA_QUERIES.mdUp} {
+    position: unset;
+  }
 `;
 
 export const ToggleTerminalButton = styled.button`
