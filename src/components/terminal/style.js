@@ -1,22 +1,20 @@
 import styled from '@emotion/styled';
-import { COLORS, MEDIA_QUERIES, SPACER, Typography } from 'src/styles/constants';
+import { COLORS, MEDIA_QUERIES, SPACER, Typography, TYPOGRAPHY_STYLE } from 'src/styles/constants';
 
 export const TerminalContainer = styled.div`
+  ${TYPOGRAPHY_STYLE.p};
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 768px;
   height: 100%;
   max-height: 1000px;
-  line-height: 1.5;
-  font-size: 0.75rem;
 
   position: absolute;
   margin: auto;
 
   ${MEDIA_QUERIES.lgUp} {
     height: 90vh;
-    font-size: 0.875rem;
     position: unset;
   }
 
@@ -71,7 +69,7 @@ export const TerminalMenuButton = styled.div`
 export const TerminalMenuHeader = styled.div`
   font-family: ${Typography.FONT_FAMILY.system};
   color: ${COLORS.black};
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   position: absolute;
   text-align: center;
   width: 100%;

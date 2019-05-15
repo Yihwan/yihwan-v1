@@ -10,7 +10,7 @@ export const LoadingContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  > div {    
+  > div {
     animation: zoomInAndOut 1s infinite;
 
     @keyframes zoomInAndOut {
@@ -88,7 +88,7 @@ export const ToggleTerminalButton = styled.button`
 
   font-family: ${Typography.FONT_FAMILY.primary};
   letter-spacing: 1.5px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
 

@@ -1,7 +1,6 @@
 # [yihwan.kim](http://yihwan.kim) redesign (in progress)
 
 ### To Do's
-* Clean-up typography/colors constants. Increase mobile font size.
 * Consider max dimensions on large high-res screens.
 * Refactor command line logic into separate class.
 * Add commands for dark/light mode.

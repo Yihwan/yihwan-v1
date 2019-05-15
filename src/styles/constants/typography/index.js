@@ -8,14 +8,13 @@ const FONT_SIZE = {
   displaySmall: '2rem',
   displayLarge: '3rem',
 
-  headingSmall: '1rem',
-  headingLarge: '1.25rem',
+  headingSmall: '1.2em',
+  headingLarge: '1.35rem',
 
   titleSmall: '1.25rem',
   titleLarge: '1.5rem',
 
-
-  bodySmall: '0.875rem',
+  bodySmall: '1rem',
   bodyLarge: '1rem',
 
   captionSmall: '0.70rem',
