@@ -8,6 +8,8 @@ import stringSimilarity from 'string-similarity';
 import CommandPrompt from 'src/shared-components/commandPrompt';
 import { isLargeViewport } from 'src/utils/viewportSizing';
 
+import CommandContext from './commandContext';
+
 import HelpModule from './helpModule';
 import {
   CommandLineForm, CommandError,

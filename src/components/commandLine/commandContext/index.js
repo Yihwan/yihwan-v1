@@ -1,14 +1,15 @@
+import {
+  HelpCommand,
+} from './commands';
+
 const STRATEGY_MAP = {
   clear: '',
 };
 
 class CommandContext {
-  constructor(command) {
-    this.command = command;
-
-  }
-
-  execute = () => {
-
+  static execute = () => {
+    console.log('hello!');
   }
 }
+
+export default CommandContext;
