@@ -1,9 +1,15 @@
-import React from 'react';
-
 import HelpModule from 'src/components/commandLine/helpModule';
 
-const HelpCommand = () => (
-  <HelpModule />
-)
+class HelpCommand {
+  static executeCommand = () => {
+    console.log('hi!');
+
+    return {
+      command: 'help',
+      errorMessage: null,
+      output: HelpModule(),
+    };
+  }
+}
 
 export default HelpCommand;

@@ -1,14 +1,17 @@
+import React from 'react';
+
 import {
   HelpCommand,
 } from './commands';
 
 const STRATEGY_MAP = {
-  clear: '',
+  help: HelpCommand,
 };
 
 class CommandContext {
-  static execute = () => {
-    console.log('hello!');
+  execute = (command) => {
+    const interaction = STRATEGY_MAP[command].executeCommand();
+    return interaction;
   }
 }
 

@@ -23,6 +23,7 @@ class CommandLine extends React.Component {
   constructor(props) {
     super(props);
     this.commandLineInput = React.createRef();
+    this.commandContext = new CommandContext();
 
     this.state = {
       previousInteractions: [],
@@ -70,6 +71,12 @@ class CommandLine extends React.Component {
     }));
   }
 
+  populatePreviousInteractionsv2 = interaction => {
+    this.setState(prevState => ({
+      previousInteractions: [...prevState.previousInteractions, interaction],
+    }));
+  }
+
   // TODO: Refactor to separate class and command hash.
   handleCommandSubmit = event => {
     event.preventDefault();
@@ -91,7 +98,9 @@ class CommandLine extends React.Component {
     }
 
     if (currentCommand === 'help') {
-      this.populatePreviousInteractions(currentCommand, null, <HelpModule />);
+      // this.populatePreviousInteractions(currentCommand, null, <HelpModule />);
+      const interaction = this.commandContext.execute('help', this.populatePreviousInteractionsv2);
+      this.populatePreviousInteractionsv2(interaction);
       return;
     }
 
