@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Location } from '@reach/router'
 
 import Header from './header';
 import Navigation from './navigation';
@@ -25,10 +24,15 @@ class CommandLineInterface extends React.Component {
   state = {
     isDesktop: null,
     isTerminalDisplayedOnMobile: false,
+    pathname: '',
   }
 
   componentDidMount() {
-    this.setState({ isDesktop: isLargeViewport() });
+    this.setState({
+      isDesktop: isLargeViewport(),
+      pathname: window.location.pathname,
+    });
+
     window.addEventListener('resize', this.handleResize);
   }
 
@@ -52,8 +56,7 @@ class CommandLineInterface extends React.Component {
 
   render() {
     const { children } = this.props;
-    const { isDesktop, isTerminalDisplayedOnMobile } = this.state;
-    const { pathname } = window.location;
+    const { isDesktop, isTerminalDisplayedOnMobile, pathname } = this.state;
 
     if (isDesktop === null) {
       return(
