@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import CommandLineInterface from 'src/components/commandLineInterface';
 import SEO from 'src/components/seo';
 import CommandPrompt from 'src/shared-components/commandPrompt';
 
@@ -10,11 +11,11 @@ const ChangelogPage = ({ data }) => {
   const { html } = data.markdownRemark;
 
   return(
-    <React.Fragment>
+    <CommandLineInterface>
       <SEO title="Changelog" keywords={['yihwan kim', 'yihwan', 'kim', 'bio']} />
       <CommandPrompt pathname="/changelog"/>
       <ChangelogSection dangerouslySetInnerHTML={{ __html: html }} />
-    </React.Fragment>
+    </CommandLineInterface>
   );
 }
 

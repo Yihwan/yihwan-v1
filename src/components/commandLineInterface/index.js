@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Location } from '@reach/router'
 
-import Header from 'src/components/header';
-import Navigation from 'src/components/navigation';
-import CommandLine from 'src/components/commandLine';
-import Terminal from 'src/components/terminal';
-import injectGlobalStyles from '../utils/injectGlobalStyles';
-import { isLargeViewport } from '../utils/viewportSizing';
+import Header from './header';
+import Navigation from './navigation';
+import CommandLine from './commandLine';
+import Terminal from './terminal';
+import injectGlobalStyles from 'src/utils/injectGlobalStyles';
+import { isLargeViewport } from 'src/utils/viewportSizing';
 import {
   LoadingContainer,
   LayoutContainer,
@@ -16,7 +17,7 @@ import {
   ToggleTerminalButton,
 } from './style';
 
-class Layout extends React.Component {
+class CommandLineInterface extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
   }
@@ -50,9 +51,9 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { children, location } = this.props;
+    const { children } = this.props;
     const { isDesktop, isTerminalDisplayedOnMobile } = this.state;
-    const { pathname } = location;
+    const { pathname } = window.location;
 
     if (isDesktop === null) {
       return(
@@ -102,4 +103,4 @@ class Layout extends React.Component {
   }
 }
 
-export default Layout;
+export default CommandLineInterface;
