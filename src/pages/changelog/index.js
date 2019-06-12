@@ -12,7 +12,11 @@ const ChangelogPage = ({ data }) => {
 
   return(
     <CommandLineInterface>
-      <SEO title="Changelog" keywords={['yihwan kim', 'yihwan', 'kim', 'bio']} />
+      <SEO
+        title="Changelog"
+        keywords={['yihwan kim', 'yihwan', 'kim', 'bio']}
+        description="Some highlights from my life ..."
+      />
       <CommandPrompt pathname="/changelog"/>
       <ChangelogSection dangerouslySetInnerHTML={{ __html: html }} />
     </CommandLineInterface>

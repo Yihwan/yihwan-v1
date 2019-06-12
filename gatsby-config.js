@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: "Yihwan Kim",
-    description: "Hi, I'm Yihwan. This is my website.",
+    description: "Hi, I'm Yihwan. I'm a software engineer at Curology. I like working with React, Gatsby, Laravel, Rails, and LEGO. This is my website.",
     author: `Yihwan Kim`,
   },
   plugins: [
