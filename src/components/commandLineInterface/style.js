@@ -9,6 +9,7 @@ export const LoadingContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: ${COLORS.terminalBlack};
 
   > div {
     animation: zoomInAndOut 1s infinite;
@@ -86,7 +87,7 @@ export const ToggleTerminalButton = styled.button`
   border: 2px solid ${COLORS.terminalGreen};
   background-color: transparent;
 
-  font-family: ${Typography.FONT_FAMILY.primary};
+  font-family: ${Typography.FONT_FAMILY.monospace};
   letter-spacing: 1.5px;
   font-size: 1rem;
   font-weight: 700;

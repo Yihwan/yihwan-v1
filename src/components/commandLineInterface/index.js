@@ -61,6 +61,7 @@ class CommandLineInterface extends React.Component {
     if (isDesktop === null) {
       return(
         <LoadingContainer>
+          {injectGlobalStyles()}
           <div><span role="img" aria-label="face-with-monocle">🧐</span></div>
         </LoadingContainer>
       );

@@ -5,7 +5,7 @@ export const CommandLineForm = styled.form`
   input[type="text"] {
     ${TYPOGRAPHY_STYLE.p};
     border: 0;
-    font-family: ${Typography.FONT_FAMILY.primary};
+    font-family: ${Typography.FONT_FAMILY.monospace};
     background-color: ${COLORS.darkGrey};
     color: ${COLORS.terminalWhite};
     caret-color: ${COLORS.terminalGreen};
@@ -26,6 +26,6 @@ export const CommandStart = styled.span`
 
 export const CommandError = styled.div`
   > span {
-    color: ${COLORS.borderRed};
+    color: ${COLORS.terminalBorderRed};
   }
 `;

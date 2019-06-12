@@ -20,18 +20,18 @@ class Terminal extends React.Component {
       <TerminalContainer>
         <TerminalMenuBar>
           <TerminalMenuButton
-            background={COLORS.buttonRed}
-            border={COLORS.borderRed}
+            background={COLORS.terminalButtonRed}
+            border={COLORS.terminalBorderRed}
             onClick={closeTerminal}
           />
           <TerminalMenuButton
-            background={COLORS.buttonYellow}
-            border={COLORS.borderYellow}
+            background={COLORS.terminalButtonYellow}
+            border={COLORS.terminalBorderYellow}
             onClick={closeTerminal}
           />
           <TerminalMenuButton
-            background={isDesktop ? COLORS.buttonGreen : COLORS.buttonDisabled}
-            border={isDesktop ? COLORS.buttonGreen : COLORS.borderDisabled }
+            background={isDesktop ? COLORS.terminalButtonGreen : COLORS.terminalButtonDisabled}
+            border={isDesktop ? COLORS.terminalButtonGreen : COLORS.terminalBorderDisabled }
           />
         <TerminalMenuHeader>Yihwan Kim—{terminalHeaderDate}—Yihwan{pathname === '/' ? '' : `/${capitalize(pathname.slice(1))}`}</TerminalMenuHeader>
         </TerminalMenuBar>

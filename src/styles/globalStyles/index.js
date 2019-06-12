@@ -53,7 +53,7 @@ export const resetStyles = css`
 
 export const brandStyles = css`
   html {
-    font-family: ${Typography.FONT_FAMILY.primary};
+    font-family: ${Typography.FONT_FAMILY.monospace};
     color: white;
     background-color: ${COLORS.terminalBlack};
   }

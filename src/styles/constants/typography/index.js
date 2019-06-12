@@ -8,11 +8,11 @@ const FONT_SIZE = {
   displaySmall: '2rem',
   displayLarge: '3rem',
 
-  headingSmall: '1.2em',
-  headingLarge: '1.35rem',
+  headingSmall: '1.25rem',
+  headingLarge: '1.5rem',
 
-  titleSmall: '1.25rem',
-  titleLarge: '1.5rem',
+  titleSmall: '1.2em',
+  titleLarge: '1.35rem',
 
   bodySmall: '1rem',
   bodyLarge: '1rem',
@@ -22,7 +22,7 @@ const FONT_SIZE = {
 };
 
 const FONT_FAMILY = {
-  primary: 'Monaco, monospace',
+  monospace: 'Monaco, monospace',
   system: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
 }
 
@@ -41,7 +41,7 @@ const displayStyle = css`
 const headingStyle = css`
   font-size: ${FONT_SIZE.headingSmall};
   line-height: 1.35;
-  font-family: ${FONT_FAMILY.primary};
+  font-family: ${FONT_FAMILY.monospace};
   color: ${COLORS.terminalWhite};
   font-weight: 600;
 
@@ -53,7 +53,7 @@ const headingStyle = css`
 
 const titleStyle = css`
   font-size: ${FONT_SIZE.titleSmall};
-  font-family: ${FONT_FAMILY.primary};
+  font-family: ${FONT_FAMILY.monospace};
   color: ${COLORS.terminalWhite};
 
   ${MEDIA_QUERIES.mdUp} {
@@ -76,7 +76,7 @@ const captionStyle = css`
 
 const pStyle = css`
   font-size: ${FONT_SIZE.bodySmall};
-  font-family: ${FONT_FAMILY.primary};
+  font-family: ${FONT_FAMILY.monospace};
   color: ${COLORS.terminalWhite};
   line-height: 1.5;
   letter-spacing: .1px;

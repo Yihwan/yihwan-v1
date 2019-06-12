@@ -12,7 +12,7 @@ export const Greeting = styled(Typography.Display)`
 
 `;
 
-export const IntroSnippet = styled(Typography.Heading)`
+export const IntroSnippet = styled(Typography.Title)`
 
   margin-top: ${SPACER.small};
   ${MEDIA_QUERIES.lgUp} {
