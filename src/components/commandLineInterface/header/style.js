@@ -13,11 +13,7 @@ export const Greeting = styled(Typography.Display)`
 `;
 
 export const IntroSnippet = styled(Typography.Title)`
-
   margin-top: ${SPACER.small};
-  ${MEDIA_QUERIES.lgUp} {
-    margin-top: ${SPACER.base};
-  }
 `;
 
 export const WaveContainer = styled.div`

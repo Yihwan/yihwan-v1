@@ -55,9 +55,11 @@ const titleStyle = css`
   font-size: ${FONT_SIZE.titleSmall};
   font-family: ${FONT_FAMILY.monospace};
   color: ${COLORS.terminalWhite};
+  line-height: 1.2;
 
   ${MEDIA_QUERIES.mdUp} {
     font-size: ${FONT_SIZE.titleLarge};
+    line-height: 1.33;
   }
 `;
 
