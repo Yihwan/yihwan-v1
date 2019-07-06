@@ -99,6 +99,11 @@ class CommandLine extends React.Component {
     }
 
     if (availableRoutes.includes(currentCommand)) {
+      if (currentCommand === 'blog') {
+        window.open(PAGE_URLS[currentCommand]);
+        return;
+      }
+
       navigate(`/${PAGE_URLS[currentCommand]}`);
       return;
     }

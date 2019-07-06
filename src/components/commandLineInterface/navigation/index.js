@@ -11,6 +11,13 @@ class Navigation extends React.Component {
     const linkArray = [];
 
     for (const page in PAGE_URLS) {
+      if (page === 'blog') {
+        linkArray.push(
+          <a href={PAGE_URLS[page]} target="_blank" rel="noopener noreferrer">Blog</a>
+        );
+        continue;
+      }
+
       linkArray.push(
         <Link to={PAGE_URLS[page]}>{capitalize(page)}</Link>
       );

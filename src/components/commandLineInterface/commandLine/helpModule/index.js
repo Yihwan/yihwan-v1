@@ -7,6 +7,7 @@ const HelpModule = () => (
     <HelpHeader>Page Navigation</HelpHeader>
     <HelpContent>home</HelpContent>
     <HelpContent>changelog</HelpContent>
+    <HelpContent>blog</HelpContent>
     <HelpContent>contact</HelpContent>
 
     <HelpHeader>Editing</HelpHeader>
