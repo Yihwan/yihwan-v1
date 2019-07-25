@@ -36,6 +36,14 @@ class CommandLineInterface extends React.Component {
     window.addEventListener('resize', this.handleResize);
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (window.location.pathname !== prevState.pathname) {
+      this.setState({
+        pathname: window.location.pathname,
+      });
+    }
+  }
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
   }

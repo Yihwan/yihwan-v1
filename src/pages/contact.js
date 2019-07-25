@@ -7,6 +7,7 @@ const CONTACT_LINKS = [
   <a href="https://www.strava.com/athletes/yihwan" target="_blank" rel="noopener noreferrer">Strava</a>,
   <a href="https://github.com/Yihwan" target="_blank" rel="noopener noreferrer">Github</a>,
   <a href="https://www.linkedin.com/in/yihwan" target="_blank" rel="noopener noreferrer">LinkedIn</a>,
+  <a href="https://www.twitter.com/yihwan" target="_blank" rel="noopener noreferrer">Twitter</a>,
 ];
 
 const ContactPage = () => (
