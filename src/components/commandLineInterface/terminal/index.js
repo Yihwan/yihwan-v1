@@ -14,7 +14,7 @@ import {
 class Terminal extends React.Component {
 
   render() {
-    const { pathname, children, closeTerminal, isDesktop } = this.props;
+    const { pathname, children } = this.props;
 
     return(
       <TerminalContainer>
@@ -22,16 +22,14 @@ class Terminal extends React.Component {
           <TerminalMenuButton
             background={COLORS.terminalButtonRed}
             border={COLORS.terminalBorderRed}
-            onClick={closeTerminal}
           />
           <TerminalMenuButton
             background={COLORS.terminalButtonYellow}
             border={COLORS.terminalBorderYellow}
-            onClick={closeTerminal}
           />
           <TerminalMenuButton
-            background={isDesktop ? COLORS.terminalButtonGreen : COLORS.terminalButtonDisabled}
-            border={isDesktop ? COLORS.terminalButtonGreen : COLORS.terminalBorderDisabled }
+            background={COLORS.terminalButtonGreen}
+            border={COLORS.terminalBorderGreen}
           />
         <TerminalMenuHeader>Yihwan Kim—{terminalHeaderDate}—Yihwan{pathname === '/' ? '' : `/${capitalize(pathname.slice(1))}`}</TerminalMenuHeader>
         </TerminalMenuBar>

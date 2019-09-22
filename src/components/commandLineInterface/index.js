@@ -6,14 +6,12 @@ import Navigation from './navigation';
 import CommandLine from './commandLine';
 import Terminal from './terminal';
 import injectGlobalStyles from 'src/utils/injectGlobalStyles';
-import { isLargeViewport } from 'src/utils/viewportSizing';
 import {
-  LoadingContainer,
   LayoutContainer,
   ContentContainer,
+  HeaderOuterContainer, 
+  TerminalOuterContainer,
   TerminalContentContainer,
-  MobileSplashContainer,
-  ToggleTerminalButton,
 } from './style';
 
 class CommandLineInterface extends React.Component {
@@ -22,18 +20,13 @@ class CommandLineInterface extends React.Component {
   }
 
   state = {
-    isDesktop: null,
-    isTerminalDisplayedOnMobile: false,
     pathname: '',
   }
 
   componentDidMount() {
     this.setState({
-      isDesktop: isLargeViewport(),
       pathname: window.location.pathname,
     });
-
-    window.addEventListener('resize', this.handleResize);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -44,71 +37,29 @@ class CommandLineInterface extends React.Component {
     }
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize);
-  }
-
-  handleResize = () => {
-    const { isDesktop } = this.state;
-
-    if (isDesktop !== isLargeViewport()){
-      this.setState({ isDesktop: isLargeViewport() })
-    }
-  };
-
-  toggleMobileTerminalDisplay = () => {
-    this.setState(prevState => ({
-      isTerminalDisplayedOnMobile: !prevState.isTerminalDisplayedOnMobile,
-    }));
-  }
-
   render() {
     const { children } = this.props;
-    const { isDesktop, isTerminalDisplayedOnMobile, pathname } = this.state;
-
-    if (isDesktop === null) {
-      return(
-        <LoadingContainer>
-          {injectGlobalStyles()}
-          <div><span role="img" aria-label="face-with-monocle">🧐</span></div>
-        </LoadingContainer>
-      );
-    }
+    const { pathname } = this.state;
 
     return(
       <LayoutContainer>
         <ContentContainer>
         {injectGlobalStyles()}
-        {(!isDesktop && !isTerminalDisplayedOnMobile) && (
-          <MobileSplashContainer>
+          <HeaderOuterContainer>
             <Header />
-            <ToggleTerminalButton onClick={this.toggleMobileTerminalDisplay}>
-              Open Terminal
-            </ToggleTerminalButton>
-          </MobileSplashContainer>
-        )}
+          </HeaderOuterContainer>
 
-        {(isDesktop && !isTerminalDisplayedOnMobile) && (
-          <section>
-            <Header />
-          </section>
-        )}
-
-        {(isDesktop || isTerminalDisplayedOnMobile) && (
-          <section>
+          <TerminalOuterContainer>
             <Terminal
-              closeTerminal={this.toggleMobileTerminalDisplay}
-              isDesktop={isDesktop}
               pathname={pathname}
-              >
+            >
               <Navigation pathname={pathname}/>
               <TerminalContentContainer>
                 {children}
               </TerminalContentContainer>
               <CommandLine pathname={pathname}/>
             </Terminal>
-          </section>
-        )}
+          </TerminalOuterContainer>
         </ContentContainer>
       </LayoutContainer>
     );

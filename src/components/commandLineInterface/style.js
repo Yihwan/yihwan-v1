@@ -1,32 +1,7 @@
 import styled from '@emotion/styled';
 import {
-  MEDIA_QUERIES, SPACER, BREAKPOINTS, COLORS, Typography,
+  MEDIA_QUERIES, SPACER, BREAKPOINTS, 
  } from 'src/styles/constants';
-
-export const LoadingContainer = styled.div`
-  font-size: 2rem;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${COLORS.terminalBlack};
-
-  > div {
-    animation: zoomInAndOut 1s infinite;
-
-    @keyframes zoomInAndOut {
-      0% {
-        transform: scale(1,1);
-      }
-      50% {
-        transform: scale(1.5,1.5);
-      }
-      100% {
-        transform: scale(1,1);
-      }
-    }
-  }
-`;
 
 export const LayoutContainer = styled.main`
   height: 100vh;
@@ -35,21 +10,19 @@ export const LayoutContainer = styled.main`
 `;
 
 export const ContentContainer = styled.div`
-  > section {
-    height: 100vh;
-  }
-
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  
   ${MEDIA_QUERIES.lgUp} {
-    display: flex;
-    flex-direction: column;
     position: relative;
     max-width: ${BREAKPOINTS.max}px;
     margin: 0 auto;
     flex-direction: row;
     flex: auto;
+    height: unset;
 
     > section {
-      height: unset;
       flex: 1;
     }
 
@@ -61,49 +34,17 @@ export const ContentContainer = styled.div`
   }
 `;
 
-export const MobileSplashContainer = styled.main`
-  position: absolute;
-  padding: ${SPACER.large};
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
-  margin: auto;
+export const HeaderOuterContainer = styled.section`
+  height: 210px;
+  margin: ${SPACER.x2large} ${SPACER.large};
 
-  ${MEDIA_QUERIES.smUp} {
-    padding: ${SPACER.large} ${SPACER.desktopGutter};
+  ${MEDIA_QUERIES.lgUp} {
+    height: unset; 
+    margin: unset;
   }
 `;
 
-export const ToggleTerminalButton = styled.button`
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, -50%);
-  padding: ${SPACER.base} ${SPACER.large};
-
-  color: ${COLORS.terminalWhite};
-  border: 2px solid ${COLORS.terminalGreen};
-  background-color: transparent;
-
-  font-family: ${Typography.FONT_FAMILY.monospace};
-  letter-spacing: 1.5px;
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-
-  opacity: 1;
-  animation: fadeIn 4s ease-in;
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+export const TerminalOuterContainer = styled.section`
 `;
 
 export const TerminalContentContainer = styled.section`

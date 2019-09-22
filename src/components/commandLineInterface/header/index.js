@@ -17,11 +17,10 @@ class Header extends React.Component {
   render() {
     return(
       <HeaderContainer>
-
-          <Greeting>Hi, I'm Yihwan <WaveContainer><span role="img" aria-label="waving-hand"> 👋</span></WaveContainer></Greeting>
-          <IntroSnippet>
-            <span ref={typewriter => { this.typewriter = typewriter; }}></span>
-          </IntroSnippet>
+        <Greeting>Hi, I'm Yihwan <WaveContainer><span role="img" aria-label="waving-hand"> 👋</span></WaveContainer></Greeting>
+        <IntroSnippet>
+          <span ref={typewriter => { this.typewriter = typewriter; }}></span>
+        </IntroSnippet>
       </HeaderContainer>
     );
   }

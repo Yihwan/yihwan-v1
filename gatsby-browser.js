@@ -5,3 +5,7 @@ export const onClientEntry = () => {
     console.log(`# IntersectionObserver is polyfilled!`)
   }
 }
+
+export const shouldUpdateScroll = () => {
+  return false;
+};
