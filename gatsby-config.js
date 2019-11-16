@@ -5,6 +5,8 @@ module.exports = {
     title: "Yihwan Kim",
     description: "Hi, I'm Yihwan. I'm a software engineer at Curology. I like working with React, Gatsby, Laravel, Rails, and LEGO. This is my website.",
     author: `Yihwan Kim`,
+    url: `https://yihwan.kim`,
+    image: `/preview.png`,
   },
   plugins: [
     'gatsby-plugin-emotion',
