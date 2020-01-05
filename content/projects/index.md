@@ -7,14 +7,22 @@ contentType: 'projects'
 [{</br>
   <div class="obj-content">
     name: 
+      <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/session-activity-timer/id1493474157">Session – Activity Timer</a>,<br />
+    tools: 
+      [<span class="green">'SwiftUI'</span>, <span class="green">'UIKit'</span>]</br>
+    desc: 
+      <span class="yellow">'They say it takes 10,000 hours of deliberate practice to master a skill, but who's counting? Now, you can with Session.'</span>,</br>
+  </div>
+},{</br>
+  <div class="obj-content">
+    name: 
       <a target="_blank" rel="noopener noreferrer" href="https://whatdatetimeisitrightnow.com">WhatDateTimeIsItRightNow.com</a>,<br />
     tools: 
-      [<span class="green">'Gatsby'</span>, <span class="green">'Emotion'</span>, <span class="green">'localStorage'</span>]</br>
+      [<span class="green">'Gatsby'</span>, <span class="green">'Emotion'</span>]</br>
     desc: 
       <span class="yellow">'A site that tells you what date and time it is right now.'</span>,</br>
   </div>
-},</br>
-{</br>
+},{</br>
   <div class="obj-content">
     name: 
       <a target="_blank" rel="noopener noreferrer" href="https://yihwan.github.io/javascript-fun/">JavaScript Fun</a>,<br />

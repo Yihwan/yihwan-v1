@@ -8,6 +8,7 @@ const CONTACT_LINKS = [
   <a href="https://github.com/Yihwan" target="_blank" rel="noopener noreferrer">Github</a>,
   <a href="https://www.linkedin.com/in/yihwan" target="_blank" rel="noopener noreferrer">LinkedIn</a>,
   <a href="https://www.twitter.com/yihwan" target="_blank" rel="noopener noreferrer">Twitter</a>,
+  <a href="https://apps.apple.com/us/developer/yihwan-kim/id1493474156" target="_blank" rel="noopener noreferrer">App Store</a>,
 ];
 
 const ContactPage = () => (
