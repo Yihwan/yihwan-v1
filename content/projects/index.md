@@ -20,7 +20,7 @@ contentType: 'projects'
     tools: 
       [<span class="green">'Gatsby'</span>, <span class="green">'Emotion'</span>]</br>
     desc: 
-      <span class="yellow">'A site that tells you what date and time it is right now.'</span>,</br>
+      <span class="yellow">'A site that tells you what date and time it is right now. (Try /expert mode!)'</span>,</br>
   </div>
 },{</br>
   <div class="obj-content">
