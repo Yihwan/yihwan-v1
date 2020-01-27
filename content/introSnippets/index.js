@@ -23,7 +23,10 @@ let introSnippets = [
   `I'm a fan of non-fiction that reads like fiction.`,
   `I prefer mountains over beaches, ^500 cold over heat, ^500 and snow over sun.`,
   `I tolerate Xcode as a necessary evil.`,
+  `Imperative UI should not be a thing.`,
   `Am I crazy for preferring light-themed IDEs?`,
+  `I love mango sticky rice so I ate so much mango sticky rice that I no longer love mango sticky rice.`,
+  `ฉันรักส้มตำ 😋^3000`,
 ];
 const lastIntroSnippet = [`I've run out of things to say. ^1000 Are you still here? <span role="img" aria-label="thinking-face"> 🤔</span>^2000`];
 
