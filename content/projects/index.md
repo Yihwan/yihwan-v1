@@ -7,6 +7,15 @@ contentType: 'projects'
 [{</br>
   <div class="obj-content">
     name: 
+      <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/places-san-francisco/id1497590988">Places SF</a>,<br />
+    tools: 
+      [<span class="green">'MapKit'</span>, <span class="green">'SwiftUI'</span>, <span class="green">'UIKit'</span>]</br>
+    desc: 
+      <span class="yellow">'Are you in on the secret? Download Places SF to explore dozens of privately-owned public spaces hidden throughout San Francisco.'</span>,</br>
+  </div>
+},{</br>
+  <div class="obj-content">
+    name: 
       <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/session-activity-timer/id1493474157">Session – Activity Timer</a>,<br />
     tools: 
       [<span class="green">'SwiftUI'</span>, <span class="green">'UIKit'</span>]</br>
