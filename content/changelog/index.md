@@ -9,7 +9,7 @@ contentType: 'changelog'
   <div class="changelog-date">[2020-Q1]</div>
   <div class="changelog-content">
     <div class="changelog-header">Published my first iOS app</div>
-    <div>It counts things! Download it <a target="_blank" href="https://apps.apple.com/us/app/session-activity-timer/id1493474157" rel="noopener noreferrer">here</a>.</div>
+    <div>It counts things! Download it <a target="_blank" href="https://apps.apple.com/us/developer/yihwan-kim/id1493474156" rel="noopener noreferrer">here</a>.</div>
   </div>
 </div>
 
