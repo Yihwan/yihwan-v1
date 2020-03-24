@@ -7,6 +7,15 @@ contentType: 'projects'
 [{</br>
   <div class="obj-content">
     name: 
+      <a target="_blank" rel="noopener noreferrer" href="https://restrictedtravelmap.com">Restricted Travel Map</a>,<br />
+    tools: 
+      [<span class="green">'Gatsby'</span>, <span class="green">'Emotion'</span>]</br>
+    desc: 
+      <span class="yellow">'An interactive map that tracks travel restrictions due to COVID-19.'</span>,</br>
+  </div>
+},{</br>
+  <div class="obj-content">
+    name: 
       <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/places-san-francisco/id1497590988">Places SF</a>,<br />
     tools: 
       [<span class="green">'MapKit'</span>, <span class="green">'SwiftUI'</span>, <span class="green">'UIKit'</span>]</br>
