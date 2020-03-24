@@ -7,6 +7,15 @@ contentType: 'projects'
 [{</br>
   <div class="obj-content">
     name: 
+      <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/app/id1502056323">Powerlift</a>,<br />
+    tools: 
+      [<span class="green">'RevenueCat'</span>, <span class="green">'SwiftUI'</span>, <span class="green">'UIKit'</span>]</br>
+    desc: 
+      <span class="yellow">'Powerlift makes quick barbell plate calculations so you can focus on your lifts and not worry about the math.'</span>,</br>
+  </div>
+},{</br>
+  <div class="obj-content">
+    name: 
       <a target="_blank" rel="noopener noreferrer" href="https://restrictedtravelmap.com">Restricted Travel Map</a>,<br />
     tools: 
       [<span class="green">'Gatsby'</span>, <span class="green">'Emotion'</span>]</br>
