@@ -7,6 +7,15 @@ contentType: 'projects'
 [{</br>
   <div class="obj-content">
     name: 
+      <a target="_blank" rel="noopener noreferrer" href="https://flightsunknown.com">Flights Unknown.</a>,<br />
+    tools: 
+      [<span class="green">'Gatsby Cloud'</span>, <span class="green">'Sanity'</span>]</br>
+    desc: 
+      <span class="yellow">'Find flight deals departing from a city near you.'</span>,</br>
+  </div>
+},{</br>
+  <div class="obj-content">
+    name: 
       <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/app/id1502056323">Powerlift</a>,<br />
     tools: 
       [<span class="green">'RevenueCat'</span>, <span class="green">'SwiftUI'</span>, <span class="green">'UIKit'</span>]</br>
