@@ -8,7 +8,7 @@ let introSnippets = [
   `I'm a Redux skeptic.`,
   `I enjoy figuring out how to game rewards programs, ^500 whether it's for free flights or extra guac.`,
   `I've developed PTSD from UberConference hold music.`,
-  `I'm from LA, but have lived in SF and NYC. ^1000 I'm currently back in SF.`,
+  `I'm from LA, but have lived in SF and NYC. ^1000 I'm currently in Seattle.`,
   `I've been passively 'looking' for my own apartment for the past two years, ^500 so let me know if you've got any leads.`,
   `I once boarded the wrong flight destined for the wrong continent... ^1000 and only found out because I was in somebody's seat.`,
   `I've visited or lived in 58% of the countries in South America.`,

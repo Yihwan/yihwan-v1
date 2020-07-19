@@ -6,6 +6,14 @@ contentType: 'changelog'
 <h2>Some highlights from my life ...</h2>
 
 <div class="changelog-item">
+  <div class="changelog-date">[2020-Q3]</div>
+  <div class="changelog-content">
+    <div class="changelog-header">Moved to Seattle</div>
+    <div>(Psst .. it doesn't rain nearly as much as they say.)</div>
+  </div>
+</div>
+
+<div class="changelog-item">
   <div class="changelog-date">[2020-Q1]</div>
   <div class="changelog-content">
     <div class="changelog-header">Published my first iOS app</div>
