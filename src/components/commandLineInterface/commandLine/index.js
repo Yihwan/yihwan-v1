@@ -104,7 +104,8 @@ class CommandLine extends React.Component {
         return;
       }
 
-      navigate(`/${PAGE_URLS[currentCommand]}`);
+      // lol fix this later
+      navigate(`https://yihwan.kim${PAGE_URLS[currentCommand]}`);
       return;
     }
 
