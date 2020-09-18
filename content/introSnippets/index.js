@@ -27,6 +27,7 @@ let introSnippets = [
   `Am I crazy for preferring light-themed IDEs?`,
   `I love mango sticky rice so I ate so much mango sticky rice that I no longer love mango sticky rice.`,
   `ฉันรักส้มตำ 😋^3000`,
+  `I've started writing in a <a href="https://www.notion.so/yihwan/Journal-0ef7ef2616984baba280569bfb0da796" target="_blank" rel="noopener noreferrer">journal</a>!`,
 ];
 const lastIntroSnippet = [`I've run out of things to say. ^1000 Are you still here? <span role="img" aria-label="thinking-face"> 🤔</span>^2000`];
 

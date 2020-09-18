@@ -1,14 +1,13 @@
 import React from 'react';
 
+import PAGE_URLS from 'src/constants/pageUrls';
+
 import { HelpContainer, HelpHeader, HelpContent } from './style';
 
 const HelpModule = () => (
   <HelpContainer>
     <HelpHeader>Page Navigation</HelpHeader>
-    <HelpContent>home</HelpContent>
-    <HelpContent>changelog</HelpContent>
-    <HelpContent>blog</HelpContent>
-    <HelpContent>contact</HelpContent>
+    {Object.keys(PAGE_URLS).map(pageNae => <HelpContent>{pageNae}</HelpContent>)}
 
     <HelpHeader>Editing</HelpHeader>
     <HelpContent>clear - clears terminal screen</HelpContent>
