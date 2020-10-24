@@ -4,7 +4,17 @@ contentType: 'projects'
 
 <h1>Projects</h1>
 
-[{</br>
+[
+{</br>
+  <div class="obj-content">
+    name: 
+      <a target="_blank" rel="noopener noreferrer" href="https://chrome.google.com/webstore/detail/feedsince/ipoiejdpmlhlhmhmlafcoadfioojlfim">Feedsince</a>,<br />
+    tools: 
+      [<span class="green">'Web Extension'</span>, <span class="green">'TypeScript'</span>]</br>
+    desc: 
+      <span class="yellow">'A Chrome extension that hides old tweets from your feed.'</span>,</br>
+  </div>
+}, {</br>
   <div class="obj-content">
     name: 
       <a target="_blank" rel="noopener noreferrer" href="https://flightsunknown.com">Flights Unknown.</a>,<br />
