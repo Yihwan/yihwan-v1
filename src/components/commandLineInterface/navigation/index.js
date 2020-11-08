@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { capitalize } from 'lodash';
+import { startCase, toLower } from 'lodash';
 
 import StyledArray from 'src/shared-components/styledArray';
 import PAGE_URLS from 'src/constants/pageUrls';
@@ -19,7 +19,7 @@ class Navigation extends React.Component {
       }
 
       linkArray.push(
-        <Link to={PAGE_URLS[page]}>{capitalize(page)}</Link>
+        <Link to={PAGE_URLS[page]}>{startCase(toLower(page))}</Link>
       );
     }
 
