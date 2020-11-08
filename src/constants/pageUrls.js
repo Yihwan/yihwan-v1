@@ -2,7 +2,7 @@ const PAGE_URLS = {
   'home': '/',
   'changelog': '/changelog',
   'projects': '/projects',
-  'journal': 'https://www.notion.so/yihwan/Journal-0ef7ef2616984baba280569bfb0da796',
+  'user manual': 'https://www.notion.so/User-Manual-46e5889c494044d6b68f29a8f8715bfa',
   'blog': 'https://blog.yihwan.kim',
   'contact': '/contact',
 }
